@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+}
+td {
+  border: 2px solid #333;
+  width: 100vw;
+  height: 100vh;
+}
+
+#td1 {
+    background-color: green;
+}
+
+#td2 {
+    background-color: pink;
+}

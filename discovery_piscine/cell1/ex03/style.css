@@ -1,0 +1,14 @@
+h1 {
+    font-size: 100px;
+    text-align: center;
+}
+
+.imagen{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+img{
+    height: 400px;
+    width: 600px;
+}

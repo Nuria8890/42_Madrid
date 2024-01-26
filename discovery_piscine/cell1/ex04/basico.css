@@ -1,0 +1,58 @@
+:root {
+    --fondo: pink;
+    --color_letra: white;
+    --tipo_letra: "Roboto", Monospace;
+}
+
+* {
+    background-color: var(--fondo);
+}
+
+h1{
+    color: var(--color_letra);
+    font-family: var(--tipo_letra);
+    font-size: 100px;
+    text-align: center;
+    margin: 80px;
+}
+
+.imagen{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+img{
+    height: 250px;
+    width: 400px;
+    border-radius: 15%;
+}
+
+.enlaces_web {
+    display: flex;
+    justify-content: center;
+    gap: 400px;
+    a:link {
+        color: red;
+    }
+    a:visited {
+        color: var(--color_letra);
+    }
+    a:hover {
+        color: blueviolet;
+        background-color:blueviolet;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    text-align: right;
+    font-family: var(--tipo_letra);
+    color: var(--color_letra);
+}
+
+footer {
+    margin-top: 100%;    
+}
