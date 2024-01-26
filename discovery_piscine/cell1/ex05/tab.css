@@ -1,4 +1,7 @@
 
+table{
+  border-collapse: collapse;
+}
 td {
   border: 2px solid #333;
   width: 500px;
@@ -6,7 +9,7 @@ td {
 }
 
 #td1 {
-    background-color: green;
+    background-color: rgb(106, 206, 106);
 }
 
 #td2 {
