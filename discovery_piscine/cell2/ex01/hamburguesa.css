@@ -1,21 +1,35 @@
-header {
+nav {
   display: flex;
   align-items: center;  
-  padding: 1rem;
-  margin: 2rem;
-  background-color: rgba(27, 143, 17, 0.714);
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, monospace;
-  font-size: 20px;
+}
+
+#checkbox {
+  display: none;
 }
 
 img {
   width: 5rem;
   height: 5rem;
+  cursor: pointer;
+  box-shadow: 5px 5px gray;
+}
+
+#checkbox:checked ~ .lista {
+  display: flex;
 }
 
 .lista {
   list-style-type: none;
-  display: flex;
+  display: none;
   align-items: center;
-  gap: 100%;
+  gap: 14vw;
+  color: rgb(183, 35, 35);
+  font-weight: bold;
+  padding: 10px;
+  margin: 16px;
+  background-color: rgba(12, 150, 0, 0.714);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, monospace;
+  font-size: 20px;
+  border: 10px solid #e1a20d;
+  box-shadow: 5px 5px gray;
 }

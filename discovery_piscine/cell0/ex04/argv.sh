@@ -1,4 +1,8 @@
 #!/bin/bash
-echo $1
-echo $2
-echo $3
+argumentos=("$@")
+
+echo $#
+
+for numero in {0..$#}; do
+  echo "${argumentos[$numero]}"
+done
