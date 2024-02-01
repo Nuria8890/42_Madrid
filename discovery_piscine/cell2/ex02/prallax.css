@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
 :root {
     --margen_seccion: none;
     --tamano_letra: 2vw;
@@ -16,6 +22,7 @@
     background-image: url(imagenes/contable.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 #p_contable {
@@ -34,6 +41,7 @@
     margin: var(--margen_seccion);
     padding: 36vw;
     background-color: black;
+    background-attachment: fixed;
 
 }
 
@@ -56,6 +64,7 @@
     background-image: url(imagenes/web.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 #p_web {
