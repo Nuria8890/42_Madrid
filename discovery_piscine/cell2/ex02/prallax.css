@@ -1,0 +1,67 @@
+:root {
+    --margen_seccion: none;
+    --tamano_letra: 2vw;
+    --fondo_letra: rgb(243, 243, 244);
+}
+
+.seccion {
+    display: flex;
+    justify-content: center;
+}
+
+.contable {
+    margin: var(--margen_seccion);
+    padding: 21vw;
+    background-color: rgb(0, 81, 255);
+    background-image: url(imagenes/contable.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#p_contable {
+    margin: 1vw;
+    padding: 1vw;
+    width: 55vw;
+    font-size: var(--tamano_letra);
+    background-color: var(--fondo_letra);
+}
+
+
+
+
+
+.negra {
+    margin: var(--margen_seccion);
+    padding: 36vw;
+    background-color: black;
+
+}
+
+#p_doce {
+    margin: 1vw;
+    padding: 1vw;
+    width: 25vw;
+    font-size: var(--tamano_letra);
+    background-color: var(--fondo_letra);
+}
+
+
+
+
+
+.web {
+    margin: var(--margen_seccion);
+    padding: 26.5vw;
+    background-color: rgb(72, 170, 255);
+    background-image: url(imagenes/web.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#p_web {
+    margin: 1vw;
+    padding: 1vw;
+    width: 44vw;
+    font-size: var(--tamano_letra);
+    background-color: var(--fondo_letra);
+}
