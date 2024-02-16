@@ -7,7 +7,8 @@
 :root {
     --margen_seccion: none;
     --tamano_letra: 2vw;
-    --fondo_letra: rgb(243, 243, 244);
+    --fondo_letra: rgb(240, 150, 16);
+    --borde_recuadro: 50px;
 }
 
 .seccion {
@@ -31,6 +32,7 @@
     width: 55vw;
     font-size: var(--tamano_letra);
     background-color: var(--fondo_letra);
+    border-radius: var(--borde_recuadro);
 }
 
 
@@ -42,7 +44,6 @@
     padding: 36vw;
     background-color: black;
     background-attachment: fixed;
-
 }
 
 #p_doce {
@@ -51,6 +52,7 @@
     width: 25vw;
     font-size: var(--tamano_letra);
     background-color: var(--fondo_letra);
+    border-radius: var(--borde_recuadro);
 }
 
 
@@ -73,4 +75,5 @@
     width: 44vw;
     font-size: var(--tamano_letra);
     background-color: var(--fondo_letra);
+    border-radius: var(--borde_recuadro);
 }
