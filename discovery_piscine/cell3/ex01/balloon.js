@@ -26,10 +26,12 @@ function cambiaColor() {
     if (colorActual === color.length - 1){
         colorSiguiente = 0;
     }
+
     console.log("antes de cambiar " + colorActual);
 
     balloonObj.style.background = color[colorSiguiente];
     colorActual = colorSiguiente;
+
     console.log("después de cambiar: " +colorActual);
 }
 
@@ -40,13 +42,35 @@ function explota() {
 
     console.log(tamanoBoom);
 
-    if (tamanoBoom >= 420) {
+    if (tamanoBoom > 420) {
         balloonObj.className = "efecto";
         balloonObj.style.width = 200 + "px";
         balloonObj.style.height = 200 + "px";
     }
+    // al finalizar function explota() continúa enlazando la clase efecto, por eso en function crece10() pongo clase vacía, para que no se repita el efecto de explosión.
 }
 
 
+function ratonSale() {
+    reduce5();
+    colorReverse();
+}
+
+function reduce5() {
+    const balloonObj = document.getElementById("balloon");
+    
+    var tamanoReduce = balloonObj.clientWidth - 5;
+    if (tamanoReduce >= 200) {
+    balloonObj.style.width = tamanoReduce + "px";
+    balloonObj.style.height = tamanoReduce + "px";
+    }
+
+    console.log(tamanoReduce);
+}
+
+
+function colorReverse() {
+
+}
 
 
