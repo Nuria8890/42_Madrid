@@ -1,6 +1,7 @@
 function pincha() {
     crece10();
     cambiaColor();
+    explota();
 }
 
 
@@ -29,4 +30,17 @@ function cambiaColor() {
     balloonObj.style.background = color[colorSiguiente];
     colorActual = colorSiguiente;
     console.log("después de cambiar: " +colorActual);
+}
+
+
+function explota() {
+    const balloonObj = document.getElementById("balloon");
+    var tamanoBoom = balloonObj.clientWidth;
+
+    console.log(tamanoBoom);
+
+    if (tamanoBoom >= 420) {
+        balloonObj.style.width = 200 + "px";
+        balloonObj.style.height = 200 + "px";
+    }
 }
