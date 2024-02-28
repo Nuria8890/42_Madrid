@@ -1,87 +1,72 @@
 function pincha() {
-    crece10();
-    cambiaColor();
+    cambiaTamano("sumar");
+    cambiaColor("ordenado");
     explota();
 }
 
+function ratonSale() {
+    cambiaTamano("restar");
+    cambiaColor("inverso");
+}
 
-function crece10() {
+function cambiaTamano(accion) {
     const balloonObj = document.getElementById("balloon");
     balloonObj.className = ""; // al finalizar function explota() continúa enlazando la clase efecto, por eso en este punto pongo clase vacía, para que no se repita el efecto de explosión.
-    var tamano = balloonObj.clientWidth + 10 + "px";
-    balloonObj.style.width = tamano;
-    balloonObj.style.height = tamano;
 
-    console.log(balloonObj)
+    if (accion === "sumar") {
+        var tamano = balloonObj.clientWidth + 10;
+        console.log("Has pinchado en el balloon y ahora mido " + tamano)
+    }
+    
+
+    if (accion === "restar") {
+        var tamano = balloonObj.clientWidth -5;
+        console.log("Has salido del balloon y ahora mido " + tamano)
+    }
+    
+
+    if (tamano >= 200) {
+        balloonObj.style.width = tamano + "px";
+        balloonObj.style.height = tamano + "px";
+    }
 }
-
 
 const color = ["red", "green", "blue"];
-var colorActual = 0;
+var colorAnterior = 0;
 
-function cambiaColor() {
+function cambiaColor(sentido) {
     const balloonObj = document.getElementById("balloon");
 
-    colorSiguiente = colorActual + 1;
-    if (colorActual === color.length - 1){
-        colorSiguiente = 0;
+    if (sentido === "ordenado") {
+        colorSiguiente = colorAnterior + 1;
+        if (colorAnterior === color.length - 1){
+            colorSiguiente = 0;
+        }
+        console.log("Has pinchado en el balloon y ahora soy de color " + color[colorSiguiente])
     }
 
-    console.log("Con click antes de cambiar " + colorActual);
+    if (sentido === "inverso") {
+        colorSiguiente = colorAnterior - 1;
+        if (colorAnterior === 0){
+            colorSiguiente = color.length - 1;
+        }
+        console.log("Has salido del balloon y ahora soy de color " + color[colorSiguiente])
+    }
 
     balloonObj.style.background = color[colorSiguiente];
-    colorActual = colorSiguiente;
-
-    console.log("Con click después de cambiar: " +colorActual);
+    colorAnterior = colorSiguiente;
 }
+
 
 
 function explota() {
     const balloonObj = document.getElementById("balloon");
     var tamanoBoom = balloonObj.clientWidth;
 
-    console.log(tamanoBoom);
-
     if (tamanoBoom > 420) {
         balloonObj.className = "efecto";
         balloonObj.style.width = 200 + "px";
         balloonObj.style.height = 200 + "px";
     }
-    // al finalizar function explota() continúa enlazando la clase efecto, por eso en function crece10() pongo clase vacía, para que no se repita el efecto de explosión.
+    // al finalizar function explota() continúa enlazando la clase efecto, por eso en function cambiaTamano() pongo clase vacía, para que no se repita el efecto de explosión.
 }
-
-
-function ratonSale() {
-    reduce5();
-    colorReverse();
-}
-
-function reduce5() {
-    const balloonObj = document.getElementById("balloon");
-    
-    var tamanoReduce = balloonObj.clientWidth - 5;
-    if (tamanoReduce >= 200) {
-    balloonObj.style.width = tamanoReduce + "px";
-    balloonObj.style.height = tamanoReduce + "px";
-    }
-
-    console.log(tamanoReduce);
-}
-
-
-function colorReverse() {
-    const balloonObj = document.getElementById("balloon");
-
-    colorSiguiente = colorActual - 1;
-    if (colorActual === 0){
-    colorSiguiente = 2;
-    }
-    console.log("Saliendo antes de cambiar soy: " + colorActual);
-
-    balloonObj.style.background = color[colorSiguiente];
-    colorActual = colorSiguiente;
-
-    console.log("Saliendo después de cambiar soy: " + colorActual);
-}
-
-
