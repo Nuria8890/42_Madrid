@@ -27,12 +27,12 @@ function cambiaColor() {
         colorSiguiente = 0;
     }
 
-    console.log("antes de cambiar " + colorActual);
+    console.log("Con click antes de cambiar " + colorActual);
 
     balloonObj.style.background = color[colorSiguiente];
     colorActual = colorSiguiente;
 
-    console.log("después de cambiar: " +colorActual);
+    console.log("Con click después de cambiar: " +colorActual);
 }
 
 
@@ -70,7 +70,18 @@ function reduce5() {
 
 
 function colorReverse() {
+    const balloonObj = document.getElementById("balloon");
 
+    colorSiguiente = colorActual - 1;
+    if (colorActual === 0){
+    colorSiguiente = 2;
+    }
+    console.log("Saliendo antes de cambiar soy: " + colorActual);
+
+    balloonObj.style.background = color[colorSiguiente];
+    colorActual = colorSiguiente;
+
+    console.log("Saliendo después de cambiar soy: " + colorActual);
 }
 
 
