@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <form>
+        <div class="firstNumber">
+            <label for="firstNumber"></label>
+            <input type="text" id="firstNumber" name="firstNumber" required pattern="[0-9]{1,999999}">
+            <span class="validity"></span>
+        </div>
+
+        <div class="operador">
+            <label for="operador"></label>
+            <select id="operador">
+                <option>+</option>
+                <option>-</option>
+                <option>*</option>
+                <option>/</option>
+                <option>%</option>
+            </select>
+        </div>
+
+        <div class="seconNumber">
+            <label for="seconNumber"></label>
+            <input type="text" id="seconNumber" name="seconNumber" required pattern="[0-9]{1,999999}">
+            <span class="validity"></span>
+        </div>
+
+        <div class="result">
+            <label for="result"></label>
+                <button type="submit" id="result" onclick="calcula()" name="result"> Try me! </button>
+        </div>
+
+    </form>
+
+
+
+
+
+
+    <script src="calc.js"></script>
+</body>
+</html>
