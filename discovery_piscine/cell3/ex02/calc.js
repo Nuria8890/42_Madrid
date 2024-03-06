@@ -7,12 +7,12 @@ return false;
 }
 
 function calcula() {
-    console.log ("estas pinchando en try me!");
+    console.log ("has pinchado en try me!");
 
     var firstNumberObj = document.getElementById("firstNumber");
     var seconNumberObj = document.getElementById("seconNumber");
-    var firstNumber = Number.parseInt(firstNumberObj.value); // .value no está bien, tengo que localizar que acción devuelve el número que he puesto en el input
-    var seconNumber = Number.parseInt(seconNumberObj.value); // .value no está bien, tengo que localizar que acción devuelve el número que he puesto en el input
+    var firstNumber = Number(firstNumberObj.value);
+    var seconNumber = Number(seconNumberObj.value);
 
     if (comprueba(firstNumber) && comprueba(seconNumber)) {
 
@@ -83,4 +83,9 @@ function porcentaje(a, b) {
     } else {
         alert(porcentaje);
     }
+}
+
+setInterval(ventanaEmergente,30000);
+function ventanaEmergente() {
+    window.alert("Please, use me...")
 }
