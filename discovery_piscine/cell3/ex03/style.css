@@ -1,0 +1,11 @@
+ol{
+    width: 50%;
+    border: solid 2px red;
+}
+li{
+    margin: 20px;
+    padding: 5px;
+    cursor: pointer;
+    border: solid 2px black;
+    width: fit-content;
+}
