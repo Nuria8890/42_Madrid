@@ -27,6 +27,7 @@ div {
 .firstNumber, .operador, .seconNumber, .result {
     padding: 0px 5px;
     width: 25%;
+    position: relative;
 }
 
 input {

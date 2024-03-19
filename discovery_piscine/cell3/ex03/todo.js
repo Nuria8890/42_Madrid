@@ -1,8 +1,11 @@
 
+var lasCookies = document.cookie;
+
 //CREAR UN NUEVO ELEMENTO EN LA LISTA
 const newLi = document.getElementById("btn");
 compruebaNewTarea();
 
+var contadorTareas = 0;
 
 btn.onclick = function(){
     console.log("estás haciendo click en New")
@@ -11,12 +14,20 @@ btn.onclick = function(){
     let ol = document.getElementById("ft_list");
     
     if(textoNewTarea){
+        contadorTareas++;
         var newTarea = document.createElement("li");
+        var identificadorTarea = document.createAttribute("tarea");
+        identificadorTarea.value = contadorTareas;
+        newTarea.setAttributeNode(identificadorTarea)
         ol.insertBefore(newTarea, ol.firstElementChild);
         newTarea.appendChild(document.createTextNode(textoNewTarea))
         console.log("has creado una nueva tarea");
+        document.cookie = "tarea"+contadorTareas+"="+textoNewTarea+"; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT;"
+
+        console.log(getCookie("tarea"))
     }
     compruebaNewTarea();
+    
 }
 
 function compruebaNewTarea (){
@@ -45,3 +56,9 @@ function compruebaNewTarea (){
     }
 }
 
+function getCookie(name) {
+    let matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
