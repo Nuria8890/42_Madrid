@@ -1,0 +1,12 @@
+#balloon{
+    margin: 100px;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.efecto{
+    transition-property: width, height;
+    transition-duration: 2s;
+}
