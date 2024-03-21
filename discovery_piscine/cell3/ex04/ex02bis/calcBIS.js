@@ -1,4 +1,3 @@
-
 function comprueba(a) {
 if (Number.isInteger(a) && a >= 0) {
     return true;
@@ -6,17 +5,17 @@ if (Number.isInteger(a) && a >= 0) {
 return false;
 }
 
-function calcula() {
+$('#result').on('click', function () {
     console.log ("has pinchado en try me!");
 
-    var firstNumberObj = document.getElementById("firstNumber");
-    var seconNumberObj = document.getElementById("seconNumber");
-    var firstNumber = Number(firstNumberObj.value);
-    var seconNumber = Number(seconNumberObj.value);
+    var firstNumberObj = $("#firstNumber");
+    var seconNumberObj = $("#seconNumber");
+    var firstNumber = Number(firstNumberObj.val());
+    var seconNumber = Number(seconNumberObj.val());
 
     if (comprueba(firstNumber) && comprueba(seconNumber)) {
 
-        var operador = document.getElementById("operador").value;
+        var operador = $("#operador").val();    
 
         if (operador == "+") {
             sumar(firstNumber, seconNumber);
@@ -40,7 +39,7 @@ function calcula() {
     } else {
         alert("Error :(");
     }
-}
+})
 
 
 
@@ -87,5 +86,5 @@ function porcentaje(a, b) {
 
 setInterval(ventanaEmergente,30000);
 function ventanaEmergente() {
-    window.alert("Please, use me...")
+    alert("Please, use me...")
 }
